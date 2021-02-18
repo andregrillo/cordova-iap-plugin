@@ -326,8 +326,6 @@ static NSString *priceLocaleCurrencyCode(NSLocale *priceLocale) {
         if (@available(iOS 14.0, *)) {
             [[SKPaymentQueue defaultQueue] presentCodeRedemptionSheet];
         }
-    #else
-        reject([self standardErrorCode:2], @"This method only available above iOS 14", nil);
     #endif
 #endif
     CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"presentCodeRedemptionSheet"];
